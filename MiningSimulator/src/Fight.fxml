@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: #432716;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.FightController">
+   <children>
+      <Label alignment="CENTER" layoutX="453.0" layoutY="87.0" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Fight">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#402516" height="598.0" layoutX="49.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="902.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="49.0" layoutX="50.0" layoutY="723.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px; -fx-arc-height: 0px;" width="900.0" />
+      <ImageView fitHeight="246.0" fitWidth="220.0" layoutX="671.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/DwarfWithAxe.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="SANDYBROWN" height="346.0" layoutX="400.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <ImageView fx:id="slimeImageView" fitHeight="183.0" fitWidth="229.0" layoutX="103.0" layoutY="556.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/slime.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="681.0" layoutY="226.0" prefHeight="39.0" prefWidth="227.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Player Health:           ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="playerHealth" layoutX="842.0" layoutY="230.0" prefHeight="32.0" prefWidth="58.0" text="100">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="111.0" layoutY="227.0" prefHeight="39.0" prefWidth="227.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Enemy Health:           ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="monsterHealth" layoutX="265.0" layoutY="231.0" prefHeight="32.0" prefWidth="58.0" text="100">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="440.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleAttack" prefHeight="60.0" prefWidth="120.0" text="Attack" />
+      <Button layoutX="440.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleBlock" prefHeight="60.0" prefWidth="120.0" text="Block" />
+      <Button layoutX="440.0" layoutY="637.0" mnemonicParsing="false" onAction="#handleRun" prefHeight="60.0" prefWidth="120.0" text="Run (-2 Energy)" />
+      <ImageView fx:id="goblinImageView" fitHeight="220.0" fitWidth="220.0" layoutX="115.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/goblin.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="golemImageView" fitHeight="433.0" fitWidth="370.0" layoutX="33.0" layoutY="290.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/golem.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="beastImageView" fitHeight="382.0" fitWidth="313.0" layoutX="69.0" layoutY="388.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/ancientBeast.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

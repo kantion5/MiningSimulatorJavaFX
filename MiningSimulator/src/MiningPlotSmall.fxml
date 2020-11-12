@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MiningPlotSmallController">
+   <children>
+      <Label fx:id="mineStyleLabel" layoutX="386.0" layoutY="17.0" text="Simple Small Mine">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Button layoutX="54.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleDig" prefHeight="25.0" prefWidth="60.0" text="Dig!" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#432716" height="686.0" layoutY="214.0" stroke="#432716" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="1000.0" />
+      <Rectangle fx:id="nodeRect1" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutY="224.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect2" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="200.0" layoutY="224.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect3" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="400.0" layoutY="224.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect4" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="600.0" layoutY="224.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect5" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="800.0" layoutY="224.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect10" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="800.0" layoutY="424.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect9" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="600.0" layoutY="424.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect8" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="400.0" layoutY="424.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect7" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="200.0" layoutY="424.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect6" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutY="424.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect11" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutY="624.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect12" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="200.0" layoutY="624.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect13" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="400.0" layoutY="624.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect14" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="600.0" layoutY="624.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="nodeRect15" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="200.0" layoutX="800.0" layoutY="624.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="grassRect1" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="10.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="grassRect2" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="10.0" layoutX="200.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="grassRect4" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="10.0" layoutX="600.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="grassRect3" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="10.0" layoutX="400.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <Rectangle fx:id="grassRect5" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="10.0" layoutX="800.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="200.0" />
+      <ImageView fitHeight="113.0" fitWidth="113.0" layoutX="800.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/DwarfStart.png" />
+         </image></ImageView>
+      <Button layoutX="900.0" layoutY="37.0" mnemonicParsing="false" onAction="#handle" text="Go Home" />
+      <Label layoutX="54.0" layoutY="73.0" text="Energy: ">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="energyLabel" layoutX="114.0" layoutY="73.0" prefHeight="20.0" prefWidth="60.0" text="0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="nodeButton1" layoutX="50.0" layoutY="274.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton2" layoutX="250.0" layoutY="274.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton3" layoutX="451.0" layoutY="274.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton4" layoutX="650.0" layoutY="274.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton5" layoutX="850.0" layoutY="274.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton10" layoutX="850.0" layoutY="474.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton9" layoutX="650.0" layoutY="474.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton8" layoutX="451.0" layoutY="474.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton7" layoutX="250.0" layoutY="474.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton6" layoutX="50.0" layoutY="474.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton11" layoutX="51.0" layoutY="674.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton12" layoutX="251.0" layoutY="674.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton13" layoutX="452.0" layoutY="674.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton14" layoutX="651.0" layoutY="674.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button fx:id="nodeButton15" layoutX="851.0" layoutY="674.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Select Node" />
+      <Button layoutX="170.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleFight" prefHeight="25.0" prefWidth="100.0" text="Generate Fight" />
+   </children>
+</AnchorPane>

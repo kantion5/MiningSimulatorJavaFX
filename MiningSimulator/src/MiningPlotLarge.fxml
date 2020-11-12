@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MiningPlotLargeController">
+   <children>
+      <ImageView fitHeight="113.0" fitWidth="113.0" layoutX="767.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5">
+         <image>
+            <Image url="@../../images/DwarfStart.png" />
+         </image></ImageView>
+      <Label fx:id="mineStyleLabel" layoutX="386.0" layoutY="17.0" text="Simple Large Mine">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Button layoutX="54.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleDig" prefHeight="25.0" prefWidth="60.0" text="Dig!" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#432716" height="686.0" layoutY="214.0" stroke="#432716" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="1000.0" />
+      <Rectangle fx:id="nodeRect1" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect1" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Button layoutX="900.0" layoutY="37.0" mnemonicParsing="false" onAction="#handle" text="Go Home" />
+      <Label layoutX="54.0" layoutY="73.0" text="Energy: ">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="energyLabel" layoutX="114.0" layoutY="73.0" prefHeight="20.0" prefWidth="60.0" text="0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="170.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleFight" prefHeight="25.0" prefWidth="100.0" text="Generate Fight" />
+      <Rectangle fx:id="grassRect2" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="111.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect2" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Button fx:id="nodeButton2" layoutX="129.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Rectangle fx:id="grassRect3" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="222.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect3" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect4" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="333.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect4" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect5" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="444.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect5" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect6" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="555.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect6" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect7" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="666.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect7" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect8" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="777.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect8" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="grassRect9" arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="5.0" layoutX="888.0" layoutY="214.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect9" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="219.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Button fx:id="nodeButton1" layoutX="18.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton3" layoutX="240.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton4" layoutX="351.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton5" layoutX="462.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton6" layoutX="573.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton7" layoutX="684.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton8" layoutX="795.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton9" layoutX="907.0" layoutY="245.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Rectangle fx:id="nodeRect18" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect17" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect16" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect15" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect14" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect13" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect12" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect11" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect10" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="314.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect27" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect26" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect25" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect24" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect23" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect22" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect21" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect20" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect19" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="409.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect36" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect35" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect34" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect33" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect32" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect31" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect30" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect29" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect28" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="504.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect45" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect44" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect43" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect42" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect41" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect40" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect39" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect38" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect37" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="599.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect54" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect53" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect52" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect51" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect50" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect49" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect48" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect47" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect46" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="694.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect63" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="888.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="112.0" />
+      <Rectangle fx:id="nodeRect62" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="777.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect61" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="666.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect60" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="555.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect59" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="444.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect58" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="333.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect57" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="222.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect56" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutX="111.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Rectangle fx:id="nodeRect55" arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="95.0" layoutY="789.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px;" width="111.111" />
+      <Button fx:id="nodeButton18" layoutX="907.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton17" layoutX="795.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton16" layoutX="684.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton15" layoutX="573.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton14" layoutX="462.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton13" layoutX="351.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton12" layoutX="240.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton10" layoutX="18.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton11" layoutX="129.0" layoutY="340.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton27" layoutX="907.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton26" layoutX="795.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton25" layoutX="684.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton24" layoutX="573.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton23" layoutX="462.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton22" layoutX="351.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton21" layoutX="240.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton19" layoutX="18.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton20" layoutX="129.0" layoutY="435.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton36" layoutX="907.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton35" layoutX="795.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton34" layoutX="684.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton33" layoutX="573.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton32" layoutX="462.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton31" layoutX="351.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton30" layoutX="240.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton28" layoutX="18.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton29" layoutX="129.0" layoutY="530.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton45" layoutX="907.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton44" layoutX="795.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton43" layoutX="684.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton42" layoutX="573.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton41" layoutX="462.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton40" layoutX="351.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton39" layoutX="240.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton37" layoutX="18.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton38" layoutX="129.0" layoutY="625.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton54" layoutX="907.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton53" layoutX="795.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton52" layoutX="684.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton51" layoutX="573.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton50" layoutX="462.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton49" layoutX="351.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton48" layoutX="240.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton46" layoutX="18.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton47" layoutX="129.0" layoutY="720.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton63" layoutX="907.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton62" layoutX="795.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton61" layoutX="684.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton60" layoutX="573.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton59" layoutX="462.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton58" layoutX="351.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton57" layoutX="240.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton55" layoutX="18.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="nodeButton56" layoutX="129.0" layoutY="815.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" text="Select Node">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

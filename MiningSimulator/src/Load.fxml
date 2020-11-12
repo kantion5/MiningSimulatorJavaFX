@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: #432716;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoadScreenController">
+   <children>
+      <Label alignment="CENTER" layoutX="424.0" layoutY="47.0" prefHeight="38.0" prefWidth="153.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Choose your save file" />
+      <Button layoutX="446.0" layoutY="834.0" mnemonicParsing="false" onAction="#handle" prefHeight="38.0" prefWidth="109.0" text="Load" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="200.0" layoutX="61.0" layoutY="162.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 25px; -fx-arc-height: 25px;" width="878.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="200.0" layoutX="61.0" layoutY="382.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 25px; -fx-arc-height: 25px;" width="878.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="200.0" layoutX="62.0" layoutY="602.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 25px; -fx-arc-height: 25px;" width="878.0" />
+      <Label fx:id="nameSave1" layoutX="86.0" layoutY="181.0" prefHeight="27.0" prefWidth="109.0" text="Name: Blank Save" />
+      <Label fx:id="goldSave1" layoutX="86.0" layoutY="208.0" prefHeight="27.0" prefWidth="109.0" text="Gold: 0" />
+      <Label fx:id="plotsSave1" layoutX="86.0" layoutY="235.0" prefHeight="27.0" prefWidth="109.0" text="Owned Plots: 0" />
+      <Label fx:id="plotsSave2" layoutX="86.0" layoutY="464.0" prefHeight="27.0" prefWidth="109.0" text="Owned Plots: 0" />
+      <Label fx:id="goldSave2" layoutX="86.0" layoutY="437.0" prefHeight="27.0" prefWidth="109.0" text="Gold: 0" />
+      <Label fx:id="nameSave2" layoutX="86.0" layoutY="410.0" prefHeight="27.0" prefWidth="109.0" text="Name: Blank Save" />
+      <Label fx:id="plotsSave3" layoutX="86.0" layoutY="675.0" prefHeight="27.0" prefWidth="109.0" text="Owned Plots: 0" />
+      <Label fx:id="goldSave3" layoutX="86.0" layoutY="648.0" prefHeight="27.0" prefWidth="109.0" text="Gold: 0" />
+      <Label fx:id="nameSave3" layoutX="86.0" layoutY="621.0" prefHeight="27.0" prefWidth="109.0" text="Name: Blank Save" />
+      <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="755.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="755.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="755.0" layoutY="627.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="447.0" layoutY="683.0" mnemonicParsing="false" onAction="#handle3" prefHeight="38.0" prefWidth="109.0" text="Select" />
+      <Button layoutX="446.0" layoutY="463.0" mnemonicParsing="false" onAction="#handle2" prefHeight="38.0" prefWidth="109.0" text="Select" />
+      <Button layoutX="446.0" layoutY="243.0" mnemonicParsing="false" onAction="#handle" prefHeight="38.0" prefWidth="109.0" text="Select" />
+   </children>
+</AnchorPane>

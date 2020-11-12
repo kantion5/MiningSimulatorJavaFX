@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: #432716;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeController">
+   <children>
+      <Label alignment="CENTER" layoutX="453.0" layoutY="86.0" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Home">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Button layoutX="459.0" layoutY="811.0" mnemonicParsing="false" onAction="#handle" prefHeight="49.0" prefWidth="177.0" text="Save Game" />
+      <Button layoutX="255.0" layoutY="811.0" mnemonicParsing="false" onAction="#handlePlot" prefHeight="49.0" prefWidth="177.0" text="Go to Mine Selection" />
+      <Button layoutX="49.0" layoutY="811.0" mnemonicParsing="false" onAction="#handleShop" prefHeight="49.0" prefWidth="177.0" text="Go to the Shop" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SKYBLUE" height="598.0" layoutX="49.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="902.0" />
+
+      <Button layoutX="49.0" layoutY="62.0" mnemonicParsing="false" onAction="#mainMenu" prefHeight="49.0" prefWidth="177.0" text="Main Menu" />
+
+      <ImageView fx:id="houseImage" fitHeight="561.0" fitWidth="534.0" layoutX="233.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ShackEmpty.png" />
+         </image></ImageView>
+      <Button layoutX="49.0" layoutY="62.0" mnemonicParsing="false" onAction="#handleSleep" prefHeight="49.0" prefWidth="177.0" text="Sleep" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#61381f" height="39.0" layoutX="50.0" layoutY="733.0" stroke="#61381f" strokeType="INSIDE" style="-fx-arc-width: 0px; -fx-arc-height: 0px;" width="900.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4bb52e" height="10.0" layoutX="50.0" layoutY="723.0" stroke="#4bb52e" strokeType="INSIDE" style="-fx-arc-width: 0px; -fx-arc-height: 0px;" width="900.0" />
+      <ImageView fitHeight="100.0" fitWidth="60.0" layoutX="606.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/DwarfNoItem.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="70.0" layoutY="205.0" text="Days passed:" />
+      <Label fx:id="daysLabel" layoutX="141.0" layoutY="205.0" text="0" />
+	  <Label fx:id="goldLabel" layoutX="102.0" layoutY="222.0" prefHeight="17.0" prefWidth="53.0" text="0" />
+      <Label layoutX="70.0" layoutY="222.0" text="Gold:" />
+      <Label fx:id="energyLabel" layoutX="114.0" layoutY="239.0" prefHeight="17.0" prefWidth="39.0" text="0" />
+      <Label layoutX="70.0" layoutY="239.0" text="Energy:" />
+      <ImageView fitHeight="85.0" fitWidth="156.0" layoutX="284.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/bed.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="149.0" layoutX="459.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/tablechair.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

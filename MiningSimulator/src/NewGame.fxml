@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.NewGameController">
+   <children>
+      <Pane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: #432716;">
+         <children>
+            <Label alignment="CENTER" layoutX="415.0" layoutY="272.0" prefHeight="36.0" prefWidth="159.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="New Game" />
+            <Label alignment="CENTER" layoutX="415.0" layoutY="297.0" prefHeight="36.0" prefWidth="159.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Enter Your Name" />
+            <TextField fx:id="playerName" alignment="CENTER" layoutX="364.0" layoutY="362.0" prefHeight="36.0" prefWidth="273.0" promptText="Bobert" />
+            <Button layoutX="456.0" layoutY="207.0" mnemonicParsing="false" onAction="#handle" text="Main Menu" />
+            <Button layoutX="474.0" layoutY="438.0" mnemonicParsing="false" onAction="#handleStartButton" text="Start" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

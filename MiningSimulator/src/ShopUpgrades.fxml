@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ShopController">
+   <children>
+      <Pane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: #432716;">
+         <children>
+            <Label alignment="CENTER" layoutX="38.0" layoutY="39.0" prefHeight="46.0" prefWidth="247.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Purchase an Upgrade!">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="handleUpgradesButton" layoutX="326.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleUpgrades" prefHeight="46.0" prefWidth="116.0" text="Home Upgrades" />
+            <Button layoutX="853.0" layoutY="39.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="108.0" text="Return Home" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="200.0" layoutX="37.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 25px; -fx-arc-height: 25px;" width="927.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="200.0" layoutX="37.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 25px; -fx-arc-height: 25px;" width="927.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="200.0" layoutX="37.0" layoutY="623.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 25px; -fx-arc-height: 25px;" width="927.0" />
+            <Label alignment="CENTER" layoutX="38.0" layoutY="98.0" prefHeight="46.0" prefWidth="247.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Current Gold:    ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="upgrade1" alignment="CENTER" layoutX="52.0" layoutY="242.0" prefHeight="46.0" prefWidth="247.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Pickaxe">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="upgrade2" alignment="CENTER" layoutX="52.0" layoutY="470.0" prefHeight="46.0" prefWidth="247.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Armor">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="upgrade3" alignment="CENTER" layoutX="52.0" layoutY="700.0" prefHeight="46.0" prefWidth="247.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 5px;" text="Axe">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="763.0" layoutY="220.0" onMouseClicked="#handleUpgradeOne" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="763.0" layoutY="448.0" onMouseClicked="#handleUpgradeTwo" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="763.0" layoutY="678.0" onMouseClicked="#handleUpgradeThree" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade12" fitHeight="90.0" fitWidth="90.0" layoutX="371.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade13" fitHeight="90.0" fitWidth="90.0" layoutX="461.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade14" fitHeight="90.0" fitWidth="90.0" layoutX="551.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade15" fitHeight="90.0" fitWidth="90.0" layoutX="641.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="281.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/StarFull.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="281.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/StarFull.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade25" fitHeight="90.0" fitWidth="90.0" layoutX="641.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade24" fitHeight="90.0" fitWidth="90.0" layoutX="551.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade23" fitHeight="90.0" fitWidth="90.0" layoutX="461.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade22" fitHeight="90.0" fitWidth="90.0" layoutX="371.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade32" fitHeight="90.0" fitWidth="90.0" layoutX="371.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade33" fitHeight="90.0" fitWidth="90.0" layoutX="461.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade34" fitHeight="90.0" fitWidth="90.0" layoutX="551.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="upgrade35" fitHeight="90.0" fitWidth="90.0" layoutX="641.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/unfilledStar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="281.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/StarFull.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="goldLabel" layoutX="217.0" layoutY="105.0" prefHeight="32.0" prefWidth="58.0" text="0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="upgradePlus1" layoutX="763.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleUpgradeOne" prefHeight="90.0" prefWidth="90.0" text="Button" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

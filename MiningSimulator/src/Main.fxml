@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <Pane prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: #432716;">
+         <children>
+            <Label alignment="CENTER" layoutX="282.0" layoutY="104.0" prefHeight="76.0" prefWidth="461.0" style="-fx-background-color: SANDYBROWN; -fx-background-radius: 15px;" text="Dwarf Mining Simulator">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Button layoutX="420.0" layoutY="361.0" mnemonicParsing="false" onAction="#handle" prefHeight="76.0" prefWidth="185.0" text="New Game" />
+            <Button layoutX="420.0" layoutY="483.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="76.0" prefWidth="185.0" text="Load Game" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
