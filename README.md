@@ -1,7 +1,8 @@
 # Dwarf Mining Simulator
-By: Potato Group
 
-# Members of Potato Group:
+# Application Development Project
+
+# Members of the Group:
 - Jacob De Hoyos
 - Isaac Gutierrez
 - Andrew Min
